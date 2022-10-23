@@ -1,9 +1,6 @@
-import user from '../social-profile/user.json';
+// import user from '../social-profile/user.json';
 
-<Profile
-  username={user.username}
-  tag={user.tag}
-  location={user.location}
-  avatar={user.avatar}
-  stats={user.stats}
-/>
+// export const Section =
+
+
+
