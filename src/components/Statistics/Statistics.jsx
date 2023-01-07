@@ -3,9 +3,8 @@
 export function Statistics ({ title, stats }) {
     return (
         <section>  
-            <div>
-                <h2>{title}</h2>
-            </div> 
+            {title ? <h2>{title}</h2> : ''} 
+
             <div>
                 {stats.map(stat => 
                 <div key={stat.id}>  
@@ -17,13 +16,6 @@ export function Statistics ({ title, stats }) {
                 </ul>
                 </div>)}
             </div>
-
-        
-           
-       
-
-      
-    
         </section>
     )
 }
