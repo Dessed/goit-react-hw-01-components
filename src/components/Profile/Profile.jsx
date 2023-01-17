@@ -1,31 +1,35 @@
+import { Container } from 'components/GlobalStyled/Container.styled'
+import { Descripion, Image, UserName, UserData } from 'components/Profile/Descripion.styled';
+import { Stats, StatsList, StatsLabel, StatsQuantity } from 'components/Profile/Stats.styled'
+
 export function Profile ({username, tag, location, avatar, stats}) {
     return (
-        <div className="profile">
-        <div className="description">
-        <img
+        <Container>
+        <Descripion>
+        <Image
             src={avatar}
             alt="User avatar"
             className="avatar"
         />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
-        </div>
+        <UserName>{username}</UserName>
+        <UserData>{tag}</UserData>
+        <UserData>{location}</UserData>
+        </Descripion>
 
-        <ul className="stats">
-        <li>
-            <span className="label">Followers</span>
-            <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-            <span className="label">Views</span>
-            <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-            <span className="label">Likes</span>
-            <span className="quantity">{stats.likes}</span>
-        </li>
-        </ul>
-      </div>
+        <Stats>
+        <StatsList>
+            <StatsLabel>Followers</StatsLabel>
+            <StatsQuantity>{stats.followers}</StatsQuantity>
+        </StatsList>
+        <StatsList>
+            <StatsLabel>Views</StatsLabel>
+            <StatsQuantity>{stats.views}</StatsQuantity>
+        </StatsList>
+        <StatsList>
+            <StatsLabel>Likes</StatsLabel>
+            <StatsQuantity>{stats.likes}</StatsQuantity>
+        </StatsList>
+        </Stats>
+      </Container>
     )   
 }
