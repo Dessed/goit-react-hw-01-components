@@ -9,7 +9,6 @@ export function Profile ({username, tag, location, avatar, stats}) {
         <Image
             src={avatar}
             alt="User avatar"
-            className="avatar"
         />
         <UserName>{username}</UserName>
         <UserData>{tag}</UserData>

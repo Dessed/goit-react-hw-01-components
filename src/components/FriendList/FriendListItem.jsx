@@ -1,10 +1,12 @@
+import { CardItem, StatusUser, ImgUser, UserName } from 'components/FriendList/FriendList.styled'
+
 export const FriendListItem = ({ avatar, name, isOnline }) => {
     return (
-                <li className="item">
-                <span className="status">{isOnline}</span>
-                <img className="avatar" src={avatar} alt="User avatar" width="48" />
-                <p className="name">{name}</p>
-            </li>   
+            <CardItem>
+                <StatusUser eventType={isOnline}>{isOnline}</StatusUser>
+                <ImgUser src={avatar} alt="User avatar" width="48" />
+                <UserName>{name}</UserName>
+            </CardItem>   
             )}
         
     

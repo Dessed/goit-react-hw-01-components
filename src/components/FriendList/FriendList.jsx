@@ -1,19 +1,19 @@
-import {FriendListItem} from './FriendListItem'
-import friends from 'friend-list/friends'
-console.log(friends);
+import {FriendListItem} from './FriendListItem';
+import friends from 'friend-list/friends';
+import { CardsList } from 'components/FriendList/FriendList.styled'
+
 export const FriendList =  ({ friends }) => {
     return (
         <section>
         {friends.map(friend =>
-            <div key={friend.id}>
-                <ul>
-                    <FriendListItem 
-                    avatar={friend.avatar}
-                    name={friend.name}
-                    isOnline={friend.isOnline}
-                    />
-                </ul>
-            </div>)}
+            <CardsList key={friend.id}>
+                <FriendListItem 
+                avatar={friend.avatar}
+                name={friend.name}
+                isOnline={friend.isOnline}
+                />
+            </CardsList>
+            )}
         </section>
         
     )

@@ -1,22 +1,18 @@
-// import {Cards} from "./Cards"
+import { Section, Title, StatList, StatItem, StatLabel, Statpercentage } from 'components/Statistics/Statistics.styled';
 
 export function Statistics ({ title, stats }) {
     return (
-        <section>  
-            {title ? <h2>{title}</h2> : ''} 
+        <Section>  
+            {title ? <Title>{title}</Title> : ''} 
 
-            <div>
+            <StatList>
                 {stats.map(stat => 
-                <div key={stat.id}>  
-                <ul> 
-                    <li className="item">
-                    <span className="label">{stat.label}</span>
-                    <span className="percentage">{stat.percentage}%</span>
-                    </li>
-                </ul>
-                </div>)}
-            </div>
-        </section>
+                <StatItem key={stat.id}>  
+                    <StatLabel>{stat.label}</StatLabel>
+                    <Statpercentage>{stat.percentage}%</Statpercentage>
+                </StatItem>)}
+            </StatList>
+        </Section>
     )
 }
 
