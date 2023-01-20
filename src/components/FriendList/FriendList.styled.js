@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Section = styled.section`
+    margin: 10px;
+    padding: 10px;
+    border: black solid 2px;
+`;
+
 export const CardsList = styled.ul`
    width: 450px;
    margin-left: 20px;

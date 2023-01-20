@@ -20,36 +20,24 @@ export const StatList = styled.ul`
     padding: 0;
 `;
 
+
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    console.log(color);
+    return color;
+  }
+
 export const StatItem = styled.li`
     display: flex;
     flex-direction: column;
-    border: black solid 1px;
     width: 45px;
     padding: 10px;
-    background-color: ${random_bg_color()};
-
-    :nth-of-type() {
-        background-color: ${random_bg_color()};
-    };  
+    background-color: ${getRandomColor};
 `;
-
-function random_bg_color() {
-    const x = Math.floor(Math.random() * 256);
-    const y = Math.floor(Math.random() * 256);
-    const z = Math.floor(Math.random() * 256);
-    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
-  
-    return bgColor;
-    }
-
-    // function getRandomColor() {
-    //     var letters = '0123456789ABCDEF';
-    //     var color = '#';
-    //     for (var i = 0; i < 6; i++) {
-    //         color += letters[Math.floor(Math.random() * 16)];
-    //     }
-    //     return color;
-    // }
 
 export const StatLabel = styled.span`
     font-size: 12px;
@@ -61,4 +49,6 @@ export const Statpercentage = styled.span`
     font-size: 18px;
     color: #fff;
 `;
+
+
 

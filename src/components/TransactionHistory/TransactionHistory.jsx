@@ -1,24 +1,26 @@
+import { Section, TableHeader, TableString, TableBody } from 'components/TransactionHistory/TransactionHistory.styled'
+
 export const TransactionHistory = ({ items }) => {
     return (
-        <section>
-                    <table className="transaction-history">
+        <Section>
+                    <table>
                         <thead>
                             <tr>
-                            <th>Type</th>
-                            <th>Amount</th>
-                            <th>Currency</th>
+                            <TableHeader>Type</TableHeader>
+                            <TableHeader>Amount</TableHeader>
+                            <TableHeader>Currency</TableHeader>
                             </tr>
                         </thead>
-                        <tbody>
+                        <TableBody>
                         {items.map(item =>
                             <tr key={item.id}>
-                            <td>{item.type}</td>
-                            <td>{item.amount}</td>
-                            <td>{item.currency}</td>
+                            <TableString>{item.type}</TableString>
+                            <TableString>{item.amount}</TableString>
+                            <TableString>{item.currency}</TableString>
                             </tr>
                         )}
-                        </tbody>
+                        </TableBody>
                     </table>
-        </section>
+        </Section>
     )
 }
